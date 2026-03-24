@@ -1,0 +1,35 @@
+# Виртуальное окружение
+project/venv/
+venv/
+env/
+
+# Переменные окружения (содержит API ключи)
+project/.env
+.env
+
+# Векторная база ChromaDB (генерируется автоматически)
+project/chroma_db/
+chroma_db/
+
+# Python кэш
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+project/__pycache__/
+
+# Временные файлы
+*.zip
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store
+
+# Kiro
+.kiro/
