@@ -185,7 +185,7 @@ example_questions = [
     "Какие штрафы указаны в договоре?",
     "Сколько дней отпуска у сотрудников?",
     "Как связаться с HR?",
-    "Сделай краткое резюме документа",
+    "Сделай краткое резюме договора",
 ]
 cols = st.columns(len(example_questions))
 for col, eq in zip(cols, example_questions):
