@@ -294,3 +294,4 @@ if question:
         "content": answer,
         "sources": sources_data,
     })
+    st.rerun()
