@@ -154,8 +154,14 @@ def ask_stream(question, retriever, chat_history):
     # Получаем релевантные документы через retriever
     source_docs = retriever.invoke(question)
 
-    # Формируем контекст из документов
-    context = "\n\n".join(doc.page_content for doc in source_docs)
+    # Формируем контекст из документов с метаданными
+    context_parts = []
+    for doc in source_docs:
+        meta = doc.metadata
+        fname = meta.get("source_file", meta.get("source", "unknown"))
+        page = meta.get("page", "?")
+        context_parts.append(f"[Источник: {fname}, стр. {page}]\n{doc.page_content}")
+    context = "\n\n".join(context_parts)
 
     # Формируем историю как строку
     history_str = "\n".join(
