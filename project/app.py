@@ -133,7 +133,7 @@ with st.sidebar:
         st.session_state["question_count"] = 0
         st.rerun()
 
-    st.caption(f"� Вопросов в демо: {st.session_state['question_count']} / 20")
+    st.caption(f"� Вопросов в демо: {st.session_state['question_count']} / 10")
 
 # ─── ГЛАВНЫЙ ЭКРАН ────────────────────────────────────────────────────────────
 
@@ -230,7 +230,8 @@ if st.session_state["messages"]:
         """,
         unsafe_allow_html=True,
     )
-    st.link_button("📩 Оставить заявку", "https://kwork.ru/user/yourprofile")
+    st.link_button("📩 Оставить заявку", "https://kwork.ru/script-programming/50287813/sdelayu-ii-assistenta-po-vashim-dokumentam")
+
 
 # Поле ввода
 if st.session_state["pending_question"]:
@@ -244,8 +245,8 @@ if question:
         st.error("Документы ещё загружаются. Подождите секунду и попробуйте снова.")
         st.stop()
 
-    if st.session_state["question_count"] >= 20:
-        st.warning("⚠️ Лимит демо исчерпан (20 вопросов). Нажмите «Очистить историю» для сброса.")
+    if st.session_state["question_count"] >= 10:
+        st.warning("⚠️ Лимит демо исчерпан (10 вопросов). Нажмите «Очистить историю» для сброса.")
         st.stop()
 
     st.session_state["messages"].append({"role": "user", "content": question})
