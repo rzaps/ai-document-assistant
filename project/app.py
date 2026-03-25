@@ -122,7 +122,7 @@ with st.sidebar:
     st.markdown("#### 💼 Хотите такого же для вашей компании?")
     st.link_button(
         "🚀 Хочу такой же для бизнеса",
-        "https://kwork.ru/user/yourprofile",
+        "https://kwork.ru/script-programming/50287813/sdelayu-ii-assistenta-po-vashim-dokumentam",
         use_container_width=True,
     )
 
